@@ -18,10 +18,10 @@ export default async function Heroes() {
         <p className="dark:text-zinc-400 text-zinc-600 max-w-2xl">
           Inspired by{" "}
           <RefLink
-            href="https://rafa.design"
+            href="https://www.twitch.tv/midudev"
             className="dark:text-blue-400 text-blue-500 underline"
           >
-            Rafael Condo&apos;s
+            Miguel Ángel Durán (midudev)
           </RefLink>{" "}
           heroes list, here&apos;s my own curated lineup of code conjurers and
           digital dynamos that I&apos;m absolutely stoked to meet someday.{" "}
@@ -32,19 +32,19 @@ export default async function Heroes() {
       </Slide>
 
       <ul className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 mt-12 tracking-tight">
-        {heroes.map((heroe) => (
+        {heroes.map((hero) => (
           <li
-            key={heroe._id}
+            key={hero._id}
             className="flex items-center gap-x-2 dark:bg-primary-bg bg-zinc-100 border dark:border-zinc-800 border-zinc-200 rounded-md px-2 py-1"
           >
-            <EasterEgg isMet={heroe.met} />
+            <EasterEgg isMet={hero.met} />
             <RefLink
-              href={heroe.url}
+              href={hero.url}
               className={`font-incognito tracking-wide hover:underline ${
-                heroe.met && "dark:text-green-300 text-green-800"
+                hero.met && "dark:text-green-300 text-green-800"
               }`}
             >
-              {heroe.name}
+              {hero.name}
             </RefLink>
           </li>
         ))}

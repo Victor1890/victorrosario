@@ -12,6 +12,8 @@ export default async function Job() {
     tags: ["job"],
   });
 
+  console.log("job: ", job);
+
   return (
     <section className="mt-32">
       <Slide delay={0.16}>

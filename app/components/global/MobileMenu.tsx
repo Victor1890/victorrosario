@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import {
   HiBeaker,
@@ -14,28 +14,31 @@ import Logo from "../../../public/logo.png";
 
 export default function MobileMenu() {
   const [navShow, setNavShow] = useState(false);
-  const data = [
-    {
-      title: "About",
-      href: "/about",
-      icon: HiUser,
-    },
-    {
-      title: "Projects",
-      href: "/projects",
-      icon: HiBeaker,
-    },
-    {
-      title: "Blog",
-      href: "/blog",
-      icon: HiBookmarkAlt,
-    },
-    {
-      title: "Photos",
-      href: "/photos",
-      icon: HiCamera,
-    },
-  ];
+  const data = useMemo(
+    () => [
+      {
+        title: "About",
+        href: "/about",
+        icon: HiUser,
+      },
+      {
+        title: "Projects",
+        href: "/projects",
+        icon: HiBeaker,
+      },
+      {
+        title: "Blog",
+        href: "/blog",
+        icon: HiBookmarkAlt,
+      },
+      {
+        title: "Photos",
+        href: "/photos",
+        icon: HiCamera,
+      },
+    ],
+    []
+  );
 
   const onToggleNav = () => {
     setNavShow((status) => {

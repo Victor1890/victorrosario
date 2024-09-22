@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import funImage from "@/public/yeah-right.png";
 import { BiCheckbox, BiSolidCheckboxChecked } from "react-icons/bi";
 
 export default function EasterEgg({ isMet }: { isMet: boolean }) {
   const [image, setImage] = useState(false);
 
-  const toggleImage = () => {
+  const toggleImage = useCallback(() => {
     const interval = setInterval(() => {
       setImage(true);
     });
@@ -17,7 +17,7 @@ export default function EasterEgg({ isMet }: { isMet: boolean }) {
       setImage(false);
       clearInterval(interval);
     }, 3000);
-  };
+  }, []);
 
   return (
     <>

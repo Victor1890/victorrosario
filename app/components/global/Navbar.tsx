@@ -4,26 +4,30 @@ import Logo from "@/public/logo.png";
 import Theme from "./Theme";
 import UnmountStudio from "./Unmount";
 import MobileMenu from "./MobileMenu";
+import { useMemo } from "react";
 
 export default function Navbar() {
-  const data = [
-    {
-      title: "About",
-      href: "/about",
-    },
-    {
-      title: "Projects",
-      href: "/projects",
-    },
-    {
-      title: "Blog",
-      href: "/blog",
-    },
-    {
-      title: "Photos",
-      href: "/photos",
-    },
-  ];
+  const data = useMemo(
+    () => [
+      {
+        title: "About",
+        href: "/about",
+      },
+      {
+        title: "Projects",
+        href: "/projects",
+      },
+      {
+        title: "Blog",
+        href: "/blog",
+      },
+      {
+        title: "Photos",
+        href: "/photos",
+      },
+    ],
+    []
+  );
 
   return (
     <UnmountStudio>
