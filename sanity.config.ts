@@ -7,11 +7,12 @@ import { table } from "@sanity/table";
 import { projectId, dataset } from "./lib/env.api";
 
 export default defineConfig({
-  name: "victoreke",
-  title: "victoreke.com",
+  // name: "Victor Studio",
+  // title: "victorrosar.io",
   basePath: "/studio",
   projectId,
   dataset,
   plugins: [deskTool(), visionTool(), codeInput(), table()],
+  // @ts-ignore
   schema: { types: schemaTypes },
 });
