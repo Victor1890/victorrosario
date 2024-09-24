@@ -1,4 +1,3 @@
-// import "@/app/styles/globals.css";
 import "@/styles/globals.css";
 import Script from "next/script";
 import type { Metadata } from "next";
@@ -41,7 +40,8 @@ export const metadata: Metadata = {
     canonical: options.url,
   },
   other: {
-    "google-site-verification": "IzcWMgn5Qjf-LCtA337KTGjivsf9bmod_1pZ-jxYQh8",
+    // TODO: Add Google Site Verification
+    // "google-site-verification": "IzcWMgn5Qjf-LCtA337KTGjivsf9bmod_1pZ-jxYQh8",
   },
 };
 
