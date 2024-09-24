@@ -1,43 +1,33 @@
-import "@/styles/globals.css";
-import Script from "next/script";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { incognito } from "@/assets/font/font";
-import { gitlabmono } from "@/assets/font/font";
-import Navbar from "@/components/global/Navbar";
 import Footer from "@/components/global/Footer";
+import Navbar from "@/components/global/Navbar";
+import { gitlabmono, incognito, inter } from "@/config/font";
+import { SEO } from "@/config/seo";
+import "@/styles/globals.css";
+import type { Metadata } from "next";
+import Script from "next/script";
 import { Providers } from "./providers";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--inter",
-});
-
-const options = {
-  title: "Victor Eke | Software Developer",
-  description:
-    "Victor Eke is a Software Developer and Technical Writer who is passionate about building solutions and contributing to open source communities",
-  url: "https://victoreke.com",
-  ogImage:
-    "https://res.cloudinary.com/victoreke/image/upload/v1692635746/victoreke/og.png",
-};
-
 export const metadata: Metadata = {
-  title: options.title,
-  metadataBase: new URL(options.url),
-  description: options.description,
+  title: {
+    template: `%s | ${SEO.title}`,
+    default: SEO.title,
+  },
+  metadataBase: new URL(SEO.url),
+  description: SEO.description,
   openGraph: {
-    title: options.title,
-    url: options.url,
+    title: {
+      template: `%s | ${SEO.title}`,
+      default: SEO.title,
+    },
+    url: SEO.url,
     siteName: "victoreke.com",
     locale: "en-US",
     type: "website",
-    description: options.description,
-    images: options.ogImage,
+    description: SEO.description,
+    images: SEO.ogImage,
   },
   alternates: {
-    canonical: options.url,
+    canonical: SEO.url,
   },
   other: {
     // TODO: Add Google Site Verification

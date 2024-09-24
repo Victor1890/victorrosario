@@ -12,17 +12,17 @@ import Image from "next/image";
 import { BiEnvelope, BiLinkExternal, BiSolidDownload } from "react-icons/bi";
 
 export const metadata: Metadata = {
-  title: "About | Victor Eke",
+  title: "About",
   metadataBase: new URL("https://victoreke.com/about"),
   description:
     "Learn more about my skills, experience and technical background",
   openGraph: {
-    title: "About | Victor Eke",
-    url: "https://victoreke.com/about",
+    title: "About",
+    // url: "https://victoreke.com/about",
     description:
       "Learn more about my skills, experience and technical background",
-    images:
-      "https://res.cloudinary.com/victoreke/image/upload/v1692635746/victoreke/og.png",
+    // images:
+    //   "https://res.cloudinary.com/victoreke/image/upload/v1692635746/victoreke/og.png",
   },
 };
 
